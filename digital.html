@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Digital Core — nowoczesne rozwiązania cyfrowe dla biznesu.">
+
+<title>Digital Core — Technology</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #070b12;
+        color: #f4f7ff;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 7%;
+        border-bottom: 1px solid #1b2738;
+    }
+
+    .logo {
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .logo span {
+        color: #55b8ff;
+    }
+
+    nav {
+        display: flex;
+        gap: 28px;
+        color: #aebbd0;
+    }
+
+    nav a:hover {
+        color: #55b8ff;
+    }
+
+    .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 7%;
+        background:
+            radial-gradient(
+                circle at 70% 30%,
+                rgba(0,150,255,.22),
+                transparent 35%
+            );
+    }
+
+    .hero-content {
+        max-width: 850px;
+    }
+
+    .hero small {
+        color: #55b8ff;
+        letter-spacing: 4px;
+    }
+
+    h1 {
+        font-size: clamp(50px, 8vw, 100px);
+        line-height: 1;
+        margin: 25px 0;
+    }
+
+    h1 span {
+        color: #55b8ff;
+    }
+
+    .hero p {
+        color: #aebbd0;
+        max-width: 650px;
+        font-size: 19px;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 14px 28px;
+        background: #55b8ff;
+        color: #06101a;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 90px 7%;
+    }
+
+    .title {
+        margin-bottom: 45px;
+    }
+
+    .title small {
+        color: #55b8ff;
+        letter-spacing: 3px;
+    }
+
+    .title h2 {
+        font-size: 44px;
+        margin-top: 8px;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        padding: 35px;
+        background: #0d1420;
+        border: 1px solid #1c2a3d;
+        transition: .3s;
+    }
+
+    .card:hover {
+        border-color: #55b8ff;
+        transform: translateY(-5px);
+    }
+
+    .card span {
+        color: #55b8ff;
+        font-size: 30px;
+    }
+
+    .card h3 {
+        margin: 20px 0 10px;
+    }
+
+    .card p {
+        color: #98a8bd;
+    }
+
+    .contact {
+        max-width: 700px;
+    }
+
+    .contact p {
+        color: #aebbd0;
+    }
+
+    footer {
+        padding: 30px 7%;
+        border-top: 1px solid #1b2738;
+        display: flex;
+        justify-content: space-between;
+        color: #718198;
+    }
+
+    @media (max-width: 750px) {
+
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .services {
+            grid-template-columns: 1fr;
+        }
+
+        nav {
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        footer {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+
+```
+<a href="#" class="logo">
+    DIGITAL<span>CORE</span>
+</a>
+
+<nav>
+
+    <a href="#services">
+        Usługi
+    </a>
+
+    <a href="#about">
+        O nas
+    </a>
+
+    <a href="#contact">
+        Kontakt
+    </a>
+
+</nav>
+```
+
+</header>
+
+<main>
+
+<section class="hero">
+
+```
+<div class="hero-content">
+
+    <small>
+        DIGITAL TECHNOLOGY
+    </small>
+
+    <h1>
+        Build the
+        <span>future.</span>
+    </h1>
+
+    <p>
+        Projektujemy nowoczesne rozwiązania
+        cyfrowe, które pomagają firmom rozwijać
+        się szybciej i efektywniej.
+    </p>
+
+    <a href="#services"
+       class="button">
+        Poznaj nasze rozwiązania
+    </a>
+
+</div>
+```
+
+</section>
+
+<section id="services">
+
+```
+<div class="title">
+
+    <small>
+        CO ROBIMY
+    </small>
+
+    <h2>
+        Technologie
+    </h2>
+
+</div>
+
+
+<div class="services">
+
+
+    <article class="card">
+
+        <span>
+            01
+        </span>
+
+        <h3>
+            Web Development
+        </h3>
+
+        <p>
+            Nowoczesne aplikacje i strony
+            internetowe dopasowane do biznesu.
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <span>
+            02
+        </span>
+
+        <h3>
+            Automation
+        </h3>
+
+        <p>
+            Automatyzujemy powtarzalne procesy,
+            oszczędzając czas zespołów.
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <span>
+            03
+        </span>
+
+        <h3>
+            Digital Strategy
+        </h3>
+
+        <p>
+            Pomagamy planować rozwój produktów
+            i usług cyfrowych.
+        </p>
+
+    </article>
+
+
+</div>
+```
+
+</section>
+
+<section id="about">
+
+```
+<div class="title">
+
+    <small>
+        DIGITAL CORE
+    </small>
+
+    <h2>
+        Technologia dla biznesu
+    </h2>
+
+</div>
+
+<div class="contact">
+
+    <p>
+        Łączymy technologię, design i doświadczenie
+        użytkownika, aby tworzyć rozwiązania
+        przygotowane na przyszłość.
+    </p>
+
+</div>
+```
+
+</section>
+
+<section id="contact">
+
+```
+<div class="title">
+
+    <small>
+        LET'S TALK
+    </small>
+
+    <h2>
+        Masz projekt?
+    </h2>
+
+    <a href="mailto:kontakt@example.com"
+       class="button">
+        Skontaktuj się
+    </a>
+
+</div>
+```
+
+</section>
+
+</main>
+
+<footer>
+
+```
+<span>
+    © 2026 Digital Core
+</span>
+
+<span>
+    Digital solutions
+</span>
+```
+
+</footer>
+
+</body>
+</html>

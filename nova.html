@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta name="description"
+      content="Nova Studio — fotografia, sesje i wyjątkowe historie zapisane w kadrach.">
+
+<title>Nova Studio — Fotografia</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #fff;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 7%;
+        background: rgba(17, 17, 17, .94);
+        border-bottom: 1px solid #333;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        display: flex;
+        gap: 28px;
+        color: #ccc;
+    }
+
+    nav a:hover {
+        color: #fff;
+    }
+
+    .hero {
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 20px;
+        background:
+            linear-gradient(
+                rgba(0,0,0,.55),
+                rgba(0,0,0,.75)
+            ),
+            radial-gradient(
+                circle at center,
+                #555,
+                #111 65%
+            );
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero small {
+        letter-spacing: 5px;
+        color: #bbb;
+    }
+
+    h1 {
+        font-size: clamp(50px, 9vw, 110px);
+        margin: 20px 0;
+        font-weight: 300;
+    }
+
+    .hero p {
+        color: #ccc;
+        font-size: 19px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 14px 28px;
+        border: 1px solid #fff;
+        transition: .3s;
+    }
+
+    .button:hover {
+        background: #fff;
+        color: #111;
+    }
+
+    section {
+        padding: 90px 7%;
+    }
+
+    .section-title {
+        margin-bottom: 45px;
+    }
+
+    .section-title small {
+        color: #aaa;
+        letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+        font-size: 42px;
+        margin-top: 8px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .photo {
+        min-height: 300px;
+        background:
+            linear-gradient(
+                135deg,
+                #555,
+                #222
+            );
+        display: flex;
+        align-items: end;
+        padding: 25px;
+        transition: .3s;
+    }
+
+    .photo:nth-child(2) {
+        background:
+            linear-gradient(
+                135deg,
+                #333,
+                #777
+            );
+    }
+
+    .photo:nth-child(3) {
+        background:
+            linear-gradient(
+                135deg,
+                #777,
+                #222
+            );
+    }
+
+    .photo:hover {
+        transform: scale(1.02);
+    }
+
+    .about {
+        max-width: 750px;
+        color: #ccc;
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 30px 7%;
+        border-top: 1px solid #333;
+        color: #888;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 700px) {
+
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav {
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+
+        footer {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+
+```
+<a href="#" class="logo">
+    NOVA STUDIO
+</a>
+
+<nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">O mnie</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+```
+
+</header>
+
+<main>
+
+```
+<section class="hero">
+
+    <div class="hero-content">
+
+        <small>
+            PHOTOGRAPHY STUDIO
+        </small>
+
+        <h1>
+            Stories<br>
+            in Light.
+        </h1>
+
+        <p>
+            Naturalne emocje, światło i chwile,
+            które zostają z nami na zawsze.
+        </p>
+
+        <a href="#portfolio" class="button">
+            Zobacz portfolio
+        </a>
+
+    </div>
+
+</section>
+
+
+<section id="portfolio">
+
+    <div class="section-title">
+
+        <small>
+            WYBRANE PRACE
+        </small>
+
+        <h2>
+            Portfolio
+        </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="photo">
+            <strong>
+                Portrait
+            </strong>
+        </div>
+
+        <div class="photo">
+            <strong>
+                Wedding
+            </strong>
+        </div>
+
+        <div class="photo">
+            <strong>
+                Editorial
+            </strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <div class="section-title">
+
+        <small>
+            POZNAJMY SIĘ
+        </small>
+
+        <h2>
+            O mnie
+        </h2>
+
+    </div>
+
+    <div class="about">
+
+        <p>
+            Tworzę naturalne i ponadczasowe fotografie.
+            Każda sesja jest dopasowana do osoby,
+            marki oraz historii, którą chcemy opowiedzieć.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="contact">
+
+    <div class="section-title">
+
+        <small>
+```

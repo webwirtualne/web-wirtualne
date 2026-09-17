@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Velvet Restaurant — elegancka restauracja i wyjątkowa kuchnia.">
+
+<title>Velvet Restaurant</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background: #1a0f12;
+        color: #f8eee8;
+        line-height: 1.7;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 7%;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .logo {
+        font-size: 25px;
+        letter-spacing: 4px;
+    }
+
+    nav {
+        display: flex;
+        gap: 30px;
+        color: #d7c2c5;
+    }
+
+    nav a:hover {
+        color: #fff;
+    }
+
+    .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 20px;
+        background:
+            radial-gradient(
+                circle at center,
+                #6b3039,
+                #1a0f12 65%
+            );
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero small {
+        letter-spacing: 6px;
+        color: #d9b5ba;
+    }
+
+    h1 {
+        font-size: clamp(55px, 9vw, 105px);
+        font-weight: normal;
+        margin: 20px 0;
+    }
+
+    .hero p {
+        max-width: 600px;
+        margin: auto;
+        color: #ddcfd0;
+        font-size: 19px;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 14px 30px;
+        background: #d7a1aa;
+        color: #1a0f12;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 90px 7%;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .title small {
+        color: #c7959d;
+        letter-spacing: 4px;
+    }
+
+    .title h2 {
+        font-size: 48px;
+        margin-top: 10px;
+    }
+
+    .menu {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .dish {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 25px 0;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .dish h3 {
+        margin-bottom: 5px;
+    }
+
+    .dish p {
+        color: #bdaeb0;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    .price {
+        color: #d7a1aa;
+        white-space: nowrap;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    footer {
+        padding: 30px 7%;
+        border-top: 1px solid rgba(255,255,255,.12);
+        display: flex;
+        justify-content: space-between;
+        color: #98888b;
+    }
+
+    @media (max-width: 700px) {
+
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav {
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        .dish {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        footer {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+
+```
+<a href="#" class="logo">
+    VELVET
+</a>
+
+<nav>
+
+    <a href="#menu">
+        Menu
+    </a>
+
+    <a href="#about">
+        O restauracji
+    </a>
+
+    <a href="#contact">
+        Kontakt
+    </a>
+
+</nav>
+```
+
+</header>
+
+<main>
+
+<section class="hero">
+
+```
+<div class="hero-content">
+
+    <small>
+        RESTAURANT • POZNAŃ
+    </small>
+
+    <h1>
+        Velvet
+    </h1>
+
+    <p>
+        Kuchnia inspirowana sezonem,
+        dobrym winem i spokojnymi wieczorami.
+    </p>
+
+    <a href="#menu" class="button">
+        Zobacz menu
+    </a>
+
+</div>
+```
+
+</section>
+
+<section id="menu">
+
+```
+<div class="title">
+
+    <small>
+        NASZA KUCHNIA
+    </small>
+
+    <h2>
+        Menu
+    </h2>
+
+</div>
+
+
+<div class="menu">
+
+
+    <div class="dish">
+
+        <div>
+
+            <h3>
+                Burrata
+            </h3>
+
+            <p>
+                Pomidory, bazylia, oliwa extra virgin
+            </p>
+
+        </div>
+
+        <span class="price">
+            34 zł
+        </span>
+
+    </div>
+
+
+    <div class="dish">
+
+        <div>
+
+            <h3>
+                Risotto
+            </h3>
+
+            <p>
+                Grzyby leśne, parmezan, świeże zioła
+            </p>
+
+        </div>
+
+        <span class="price">
+            46 zł
+        </span>
+
+    </div>
+
+
+    <div class="dish">
+
+        <div>
+
+            <h3>
+                Polędwiczka
+            </h3>
+
+            <p>
+                Sos pieprzowy, puree ziemniaczane
+            </p>
+
+        </div>
+
+        <span class="price">
+            59 zł
+        </span>
+
+    </div>
+
+
+    <div class="dish">
+
+        <div>
+
+            <h3>
+                Tarta czekoladowa
+            </h3>
+
+            <p>
+                Czekolada, wanilia, owoce sezonowe
+            </p>
+
+        </div>
+
+        <span class="price">
+            26 zł
+        </span>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<section id="about">
+
+```
+<div class="title">
+
+    <small>
+        VELVET
+    </small>
+
+    <h2>
+        O restauracji
+    </h2>
+
+</div>
+
+<div class="contact">
+
+    <p>
+        Miejsce stworzone dla osób,
+        które cenią dobry smak,
+        piękne wnętrza i spokojną atmosferę.
+    </p>
+
+</div>
+```
+
+</section>
+
+<section id="contact">
+
+```
+<div class="title">
+
+    <small>
+        REZERWACJE
+    </small>
+
+    <h2>
+        Zarezerwuj stolik
+    </h2>
+
+    <p>
+        ul. Przykładowa 12, Poznań
+    </p>
+
+    <a href="mailto:kontakt@example.com"
+       class="button">
+        Napisz do nas
+    </a>
+
+</div>
+```
+
+</section>
+
+</main>
+
+<footer>
+
+```
+<span>
+    © 2026 Velvet Restaurant
+</span>
+
+<span>
+    Taste & atmosphere
+</span>
+```
+
+</footer>
+
+</body>
+</html>
