@@ -460,24 +460,50 @@
         </div>
 
 
-        <form class="contact-form">
+        <form
+            class="contact-form"
+            action="https://formsubmit.co/webwirtualne@gmail.com"
+            method="POST">
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="WEB WIRTUALNE — nowa wiadomość">
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false">
+
+            <input
+                type="hidden"
+                name="_next"
+                value="https://webwirtualne.github.io/web-wirtualne/index.html#kontakt">
+
 
             <div class="form-row">
 
                 <label>
                     Imię
+
                     <input
                         type="text"
                         name="name"
-                        placeholder="Twoje imię">
+                        placeholder="Twoje imię"
+                        required>
+
                 </label>
+
 
                 <label>
                     E-mail
+
                     <input
                         type="email"
                         name="email"
-                        placeholder="Twój e-mail">
+                        placeholder="Twój e-mail"
+                        required>
+
                 </label>
 
             </div>
@@ -489,7 +515,8 @@
                 <textarea
                     name="message"
                     rows="5"
-                    placeholder="Napisz, czego potrzebujesz..."></textarea>
+                    placeholder="Napisz, czego potrzebujesz..."
+                    required></textarea>
 
             </label>
 

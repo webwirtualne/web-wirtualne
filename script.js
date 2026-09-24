@@ -5,11 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================= */
 
     /*
-       WPISZ TUTAJ ADRES E-MAIL,
-       NA KTÓRY CHCESZ OTRZYMYWAĆ WIADOMOŚCI.
+       FORMULARZ JEST OBSŁUGIWANY PRZEZ FORMSUBMIT
+       BEZPOŚREDNIO W HTML.
     */
 
-    const CONTACT_EMAIL = "TWOJ_EMAIL@example.com";
 
 
     /* =========================================
@@ -1199,7 +1198,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =========================================
-       PRAWDZIWY FORMULARZ
+       FORMULARZ KONTAKTOWY
+       FORMSUBMIT — OBSŁUGA PRZEZ HTML
     ========================================= */
 
     const contactForm =
@@ -1210,42 +1210,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (contactForm) {
 
-        contactForm.addEventListener(
-            "submit",
-            async event => {
-
-                event.preventDefault();
-
-
-                /* Sprawdzenie adresu */
-
-                if (
-                    CONTACT_EMAIL ===
-                    "TWOJ_EMAIL@example.com"
-                ) {
-
-                    alert(
-                        "Uzupełnij adres e-mail w CONTACT_EMAIL na początku pliku script.js."
-                    );
-
-                    return;
-
-                }
+        const submitButton =
+            contactForm.querySelector(
+                'button[type="submit"]'
+            );
 
 
-                const submitButton =
-                    contactForm.querySelector(
-                        'button[type="submit"]'
-                    );
+        if (submitButton) {
 
-
-                const originalText =
-                    submitButton
-                        ? submitButton.innerHTML
-                        : "";
-
-
-                if (submitButton) {
+            contactForm.addEventListener(
+                "submit",
+                () => {
 
                     submitButton.disabled =
                         true;
@@ -1255,105 +1230,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         t.formSending;
 
                 }
+            );
 
-
-                try {
-
-                    const formData =
-                        new FormData(
-                            contactForm
-                        );
-
-
-                    const data =
-                        Object.fromEntries(
-                            formData.entries()
-                        );
-
-
-                    data._subject =
-                        "WEB WIRTUALNE — nowa wiadomość";
-
-
-                    data._template =
-                        "table";
-
-
-                    const response =
-                        await fetch(
-                            `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
-                            {
-                                method: "POST",
-
-                                headers: {
-                                    "Accept":
-                                        "application/json",
-
-                                    "Content-Type":
-                                        "application/json"
-                                },
-
-                                body:
-                                    JSON.stringify(
-                                        data
-                                    )
-                            }
-                        );
-
-
-                    const result =
-                        await response.json();
-
-
-                    if (
-                        response.ok &&
-                        result.success
-                    ) {
-
-                        alert(
-                            t.form
-                        );
-
-
-                        contactForm.reset();
-
-                    } else {
-
-                        throw new Error(
-                            "FormSubmit error"
-                        );
-
-                    }
-
-
-                } catch (error) {
-
-                    console.error(
-                        "Formularz:",
-                        error
-                    );
-
-
-                    alert(
-                        t.formError
-                    );
-
-                }
-
-
-                if (submitButton) {
-
-                    submitButton.disabled =
-                        false;
-
-
-                    submitButton.innerHTML =
-                        originalText;
-
-                }
-
-            }
-        );
+        }
 
     }
 
